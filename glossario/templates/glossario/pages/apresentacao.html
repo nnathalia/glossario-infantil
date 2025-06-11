@@ -1,0 +1,30 @@
+{% extends '../base.html' %} {% block content %} {% load static %}
+
+<section class="container-fluid ">
+  <div id="texto" class="d-flex justify-content-center align-items-center flex-column p-5">
+    <h1><strong>O QUE É O GLOSSÁRIO?</strong></h1>
+    <div class="d-flex pt-5  gap-1">
+      <img
+        src="{% static 'glossario/img/menina.png' %}"
+        alt="Maria falando"
+        class="img-fluid"
+        style="max-height: 400px"
+      />
+      <div>
+        <div class="speech-bubble-left">
+          <p>
+            UM GLOSSÁRIO É COMO UM DICIONÁRIO PEQUENO QUE EXPLICA O 
+          SIGNIFICADO DE PALAVRAS DIFÍCEIS USADAS EM UM LIVRO OU TEXTO. 
+          ELE AJUDA A ENTENDER MELHOR O QUE ESTÁ ESCRITO.
+          </p>
+          <button id="speakButton" class="speakButton">
+            <i class="bi bi-volume-up fs-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</section >
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends '../base.html' %} {% block content %} {% load static %}
+<section class="container-fluid p-5">
+  <div id="texto" class="d-flex flex-column justify-content-center align-items-center">
+    <h1><strong>CORPO HUMANO</strong></h1>
+    <div class="d-flex gap-4 pt-5">
+      <div>
+        <div class="speech-bubble-right">
+          O CORPO HUMANO É FORMADO DE 
+          <strong><a href="{% url 'palavra' 3 %}"> CABEÇA</a></strong>, 
+          <strong><a href=""> TRONCO</a></strong>, 
+          <strong><a href="{% url 'palavra' 1 %}"> BRAÇOS</a></strong> E 
+          <strong><a href=""> PERNAS</a></strong>
+        </div>
+      </div>
+      <div>
+        <img src="{% static 'glossario/img/corpo-humano.png' %}" alt="">
+      </div>
+      <div>
+        <div class="speech-bubble speech-bubble-left">
+          <p>
+            EU TENHO CABEÇA, TRONCO, BRAÇOS E PERNAS,
+            MAS ALGUMAS PESSOAS NÃO TEM BRAÇOS E PERNAS OU BRAÇOS OU PERNAS
+          </p>   
+          <button id="speakButton" class="speakButton">
+            <i class="bi bi-volume-up fs-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends '../base.html' %} {% block content %} {% load static %}
+
+<section class="container-fluid p-5">
+  <div id="texto" class="row">
+    <div class="col-6">
+      <div class="d-flex pt-5 justify-content-center gap-1">
+        <img
+          src="{% static 'glossario/img/menina.png' %}"
+          alt="Maria falando"
+          class="img-fluid"
+          style="max-height: 400px;"
+        />
+        <div>
+          <div class="speech-bubble-left">
+            <strong>OLÁ AMIGUINHO!</strong><br />
+            <strong>SEJA BEM VINDO!</strong><br />
+            EU SOU A MARIA E VOU TE APRESENTAR O GLOSSÁRIO DO CORPO HUMANO!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="d-flex flex-column p-5">
+        <h1>
+          <strong
+            >MEU PRIMEIRO
+            <span style="color: #3cb44a"> GLOSSÁRIO</span></strong
+          >
+        </h1>
+        <h1>
+          <strong>DO CORPO HUMANO</strong>
+        </h1>
+        <div class="mt-4 text-secondary">
+          <p class="mb-0">TATIANE MENDES FERREIRA</p>
+          <p class="mb-0" >REBEKA DA SILVA AGUIAR</p>
+          <p >NATHALIA MARIANO LOPES</p>
+          <button id="speakButton" class="speakButton">
+            <i class="bi bi-volume-up fs-2"></i>
+          </button>
+        </div>
+        
+        <div class="mt-3 bt-index">
+          <a href="{% url 'corpo_humano' %}">
+            <button>VAMOS CONHECER O CORPO HUMANO! </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+{% endblock %}

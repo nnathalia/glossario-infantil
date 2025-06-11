@@ -1,0 +1,72 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container-fluid">
+  <div
+    id="texto"
+    class="d-flex justify-content-center align-items-center flex-column p-5"
+  >
+    <h1><strong>COMO USAR ESTE GLOSSÁRIO</strong></h1>
+
+    <div class="pt-3 d-flex justify-content-center align-items-center">
+      <figure class="img-exemplo">
+        <img src="{% static 'glossario/img/como_usar/exemplo.png' %}" alt="" />
+      </figure>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      {% for item in palavras_context %}
+
+      <!-- Botão que abre o modal -->
+      <button
+        type="button"
+        class="btn btn-lg btn-como-usar {{ item.cor }}"
+        data-bs-toggle="modal"
+        data-bs-target="#modal{{ item.id }}"
+      >
+        {{ item.palavra }}
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modal{{ item.id }}"
+        tabindex="-1"
+        aria-labelledby="modalLabel{{ item.id }}"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header justify-content-center border-0">
+              <h5 class="modal-title text-center">
+                <strong>{{ item.palavra }}</strong>
+              </h5>
+            </div>
+
+            <div class="modal-body d-flex flex-column justify-content-center align-items-center text-center p-5">
+              <h5><strong>{{ item.significado }}</strong></h5>
+              <!-- Botão de fala -->
+              <button 
+                class="speakButton mt-3" 
+                data-palavra="{{ item.palavra }}" 
+                data-significado="{{ item.significado }}"
+              >
+                <i class="bi bi-volume-up fs-2"></i>
+              </button>
+            </div>
+
+            <div class="modal-footer justify-content-center border-0">
+              <button type="button" class="btn btn-modal" data-bs-dismiss="modal">OK</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
