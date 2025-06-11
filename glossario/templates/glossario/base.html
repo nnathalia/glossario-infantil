@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLOSSÁRIO</title>
+ <!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'glossario/css/style.css' %}">
+
+<script src="{% static 'glossario/js/speak.js' %}"></script>
+
+  {% load django_bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+
+</head>
+<body>
+  <section style="min-height: 100vh;">
+    <header>
+      {% block navbar %}
+        {% include './layout/navbar.html' %}
+      {% endblock %}
+    </header>
+  
+    <main class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+      {% block content %}
+        {# CONTEÚDO PRINCIPAL #}
+      {% endblock %}
+    </main>
+  </section>
+  
+  
+  <footer>
+    {% block footer %}
+      {% include './layout/footer.html' %}
+    {% endblock %}
+  </footer>
+</body>
+</html>

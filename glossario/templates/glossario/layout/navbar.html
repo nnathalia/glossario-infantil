@@ -1,0 +1,25 @@
+<nav class="navbar bg-navbar pb-0">
+  <div class="container-fluid linha">
+    <a class="navbar-brand fs-3" href="{% url 'index' %}">GLOSSÁRIO</a>
+
+    <ul class="d-flex align-items-center mb-0 gap-5 list-unstyled">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'apresentacao' %}">APRESENTAÇÃO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'como_usar' %}">COMO USAR ESSE GLOSSÁRIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'palavra' 1 %}">PALAVRAS</a>
+      </li>
+      {% comment %} <li class="nav-item">
+        <a class="nav-link" href="#">ABREVIATURAS E SÍMBOLOS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">FICHA TÉCNICA</a>
+      </li> {% endcomment %}
+      
+    </ul>
+  </div>
+  <div class="hr-style"></div>
+</nav>
