@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static/
+
+# If your configuration files contain sensitive information
+.env
+.env.*
+
+# Pytest cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# coverage
+htmlcov/
+.coverage
+.coverage.*
+
+# virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# VSCode and other IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS files
+.DS_Store
+
+# Node modules (if using for frontend)
+node_modules/
+
+# pip-tools output
+*.txt
+
+# Sphinx documentation
+docs/_build/
+
+# Local settings
+local_settings.py
+
+# Celery beat schedule
+celerybeat-schedule
